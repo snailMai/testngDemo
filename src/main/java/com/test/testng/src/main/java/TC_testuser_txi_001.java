@@ -2,6 +2,7 @@ package com.test.testng.src.main.java;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.test.testng.utils.HttpConnect;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -16,9 +17,9 @@ import java.net.URISyntaxException;
 
 public class TC_testuser_txi_001 {
     @Test
-    public void test(){
-        String body = "{\"abc\":\"123\"}";
-        JSONObject jsonObject = JSON.parseObject(body);
+    public void test() {
+//        String body = "{\"abc\":\"123\"}";
+//        JSONObject jsonObject = JSON.parseObject(body);
 
         HttpClient httpClient = HttpClients.createDefault();
 
@@ -34,7 +35,7 @@ public class TC_testuser_txi_001 {
                     String bodyResult = EntityUtils.toString(entity, "utf-8");
                     System.out.println("bodyResult = " + bodyResult);
                 } else {
-                    
+
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -42,5 +43,10 @@ public class TC_testuser_txi_001 {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void test_newLog() {
+        HttpResponse httpResponse = new HttpConnect().httpGet("http://129.226.174.57:8081/myBlog/testuser", "testng");
     }
 }
