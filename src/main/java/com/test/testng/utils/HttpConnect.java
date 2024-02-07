@@ -19,9 +19,9 @@ public class HttpConnect {
 
     public static HttpResponse httpGet(String url, String... args){
         // 以下三行是为了删除多余标注
-        System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
-        System.setProperty("org.apache.commons.logging.simplelog.showdatetime", "true");
-        System.setProperty("org.apache.commons.logging.simplelog.log.org.apache.commons.httpclient", "stdout");
+//        System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
+//        System.setProperty("org.apache.commons.logging.simplelog.showdatetime", "true");
+//        System.setProperty("org.apache.commons.logging.simplelog.log.org.apache.commons.httpclient", "stdout");
         HttpResponse response = null;
         HttpClient httpClient = HttpClients.createDefault();
         url = url + "/" + args[0];
