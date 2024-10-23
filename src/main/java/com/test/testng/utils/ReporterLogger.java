@@ -22,5 +22,12 @@ public class ReporterLogger {
         Reporter.log(message);
     }
 
+    public void error(String message){
+        //使用slf4j打印到控制台或者文件
+        LOGGER.error(message);
+        //记录到Reporter
+        Reporter.log(message);
+    }
+
 
 }

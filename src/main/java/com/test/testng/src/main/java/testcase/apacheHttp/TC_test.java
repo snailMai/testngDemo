@@ -1,10 +1,7 @@
-package com.test.testng.src.main.java;
+package com.test.testng.src.main.java.testcase.apacheHttp;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.test.testng.logic.HttpResponseVo;
 import com.test.testng.logic.HttpUtils;
-import com.test.testng.utils.HttpConnect;
 import com.test.testng.utils.ReporterLogger;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

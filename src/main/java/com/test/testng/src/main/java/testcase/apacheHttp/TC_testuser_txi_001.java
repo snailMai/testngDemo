@@ -1,7 +1,6 @@
-package com.test.testng.src.main.java;
+package com.test.testng.src.main.java.testcase.apacheHttp;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
+import com.test.testng.src.main.java.global.GLOBALPARAMETER;
 import com.test.testng.utils.HttpConnect;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -23,7 +22,8 @@ public class TC_testuser_txi_001 {
 
         HttpClient httpClient = HttpClients.createDefault();
 
-        String url = "http://129.226.174.57:8081/myBlog/testuser/testng";
+        String url = GLOBALPARAMETER.HOST + "/testuser/allTestUserVue/page/1";
+//        String url = "http://45.78.60.3:8081/myBlog/testuser/allTestUserVue/page/1";
         try {
             URIBuilder uriBuilder = new URIBuilder(url);
             HttpGet httpGet = new HttpGet(uriBuilder.build());
@@ -45,8 +45,10 @@ public class TC_testuser_txi_001 {
         }
     }
 
+
+
     @Test
     public void test_newLog() {
-        HttpResponse httpResponse = new HttpConnect().httpGet("http://129.226.174.57:8081/myBlog/testuser", "testng");
+//        HttpResponse httpResponse = new HttpConnect().httpGet("http://129.226.174.57:8081/myBlog/testuser", "testng");
     }
 }

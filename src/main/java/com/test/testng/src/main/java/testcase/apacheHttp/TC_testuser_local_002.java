@@ -1,4 +1,4 @@
-package com.test.testng.src.main.java;
+package com.test.testng.src.main.java.testcase.apacheHttp;
 
 import org.testng.annotations.*;
 
